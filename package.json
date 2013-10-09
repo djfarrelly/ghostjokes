@@ -13,11 +13,11 @@
     "connect-mongo": "latest",
     "mongoose": "latest",
     "async": "latest",
-    "express-hbs": "latest",
     "passport": "latest",
     "winston": "latest",
     "express-trace": "0.0.3",
-    "passport-twitter": "~1.0.2"
+    "passport-twitter": "~1.0.2",
+    "hbs": "~2.4.0"
   },
   "devDependencies": {
     "mocha": "latest",
