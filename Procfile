@@ -1,1 +1,1 @@
-web: train run
+web: node ./app/index.js
