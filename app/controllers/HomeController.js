@@ -3,18 +3,17 @@ module.exports = function (app, Jokes) {
 
     // Landing
 
-    index:[
-      function (req, res, next) {
+    index:function (req, res) {
         
-        Jokes.findOne({}, function(err, joke){
-          if (err) throw err;
+      Jokes.findOne({}, function(err, joke){
+        if (err) throw err;
 
-          res.render('index', {
-              title: 'The best ghost jokes on the planet'
-            , jokes: [joke]
-          });
+        res.render('index', {
+            title: 'The best ghost jokes on the planet'
+          , jokes: joke ? [joke] : []
         });
-      }],
+      });
+    },
 
     about: function(req, res){
       res.render('about');
