@@ -1,15 +1,33 @@
 {
-  "name": "ghostjokes",
-  "version": "0.1.0",
-  "description": "The ghostjokes site",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "name": "train-template-standard",
+  "version": "0.0.2",
+  "directories": {},
+  "engines": {
+    "node": ">=0.6.6",
+    "npm": ">=1.1"
   },
-  "author": "Dan Farrelly <daniel.j.farrelly@gmail.com> (http://djfarrelly.com/)",
-  "license": "BSD-2-Clause",
   "dependencies": {
-    "express": "~3.4.0",
-    "jade": "~0.35.0"
+    "express": "3.2.x",
+    "express-train": "1.0.x",
+    "connect-timeout": "latest",
+    "connect-mongo": "latest",
+    "mongoose": "latest",
+    "async": "latest",
+    "express-hbs": "latest",
+    "passport": "latest",
+    "winston": "latest",
+    "express-trace": "0.0.3",
+    "passport-twitter": "~1.0.2"
+  },
+  "devDependencies": {
+    "mocha": "latest",
+    "grunt": "~0.4.1",
+    "grunt-contrib-stylus": "~0.8.0",
+    "grunt-contrib-watch": "~0.5.3"
+  },
+  "main": "./app/index.js",
+  "scripts": {
+    "start": "./app/index.js",
+    "test": "mocha test"
   }
 }

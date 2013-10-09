@@ -1,0 +1,25 @@
+
+// Transitions
+transition(prop = all, speed = 300ms, timing = ease-in-out)
+    -webkit-transition: prop speed timing
+    -moz-transition: prop speed timing
+    -o-transition: prop speed timing
+    transition: prop speed timing
+
+@-webkit-keyframes fadeIn {
+  from { opacity:0.0; }
+  to { opacity:1.0; }
+}
+@-moz-keyframes fadeIn {
+  from { opacity:0.0; }
+  to { opacity:1.0; }
+}
+@keyframes fadeIn {
+  from { opacity:0.0; }
+  to { opacity:1.0; }
+}
+
+fadeIn()
+    -webkit-animation: fadeIn 2s; 
+    -moz-animation: fadeIn 2s; 
+    animation: fadeIn 2s;

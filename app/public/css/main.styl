@@ -1,0 +1,134 @@
+@import 'normalize'
+@import 'mixins'
+@import 'helpers'
+
+imageDir = "/img/"
+
+backgroundColor = #FCFCFC
+fontColor = #222
+linkColor = #75C2E7
+
+// :::::: Basic Layout ::::::
+
+body
+    padding:0.5em 3em;
+    font-size:13px;
+    background: backgroundColor;
+    color: fontColor;
+    font-family: "Noto Serif", "Comic Sans", "Comic Sans MS", sans-serif;
+    font-style: italic;
+
+header
+    width:100%; margin: 1em auto;
+
+.branding
+    display: inline-block; margin: 0;
+    height: 40px; padding-right:38px;
+
+    font-size: 1.7em; line-height:1.5em;
+    font-weight: normal; color: fontColor;
+    
+    background-image: url( imageDir ghost_mascot_small.png );
+    background-repeat: no-repeat;
+    background-position: right top;
+
+    transition()
+
+    &:hover
+        color: lighten(fontColor, 40%)
+        padding-right: 44px
+
+.cssanimations
+    .branding
+        fadeIn()
+
+.nav
+    float:right;
+
+.nav-user-icon
+    height:30px; width:30px; margin: 5px 0 5px 5px;
+
+footer
+    width:100%
+    position: fixed
+    bottom:0px; left:0px;
+
+.footer-nav
+    list-style: none
+    padding-left: 0
+    text-align: center
+    li
+        display: inline
+        margin:0 0.5em
+
+
+
+// :::::: Generic Element Styles ::::::::
+a
+    color: linkColor
+    text-decoration: none
+    transition()
+    &:hover
+        color: darken(linkColor, 30%)
+
+.button
+    display: inline-block;
+    padding:0.5em 1.0em;
+    border-radius: 2px;
+
+
+// :::::: Page Styles ::::::::::
+    
+.page-404
+    text-align: center
+
+.content
+    text-align:center;
+
+
+.joke-setup
+    font-size:1.8em
+
+.joke-hidden
+    opacity: 0.0;
+    transition()
+    &.show
+        opacity: 1.0;
+
+
+.joke-punchline
+    font-size: 1.8em
+
+.joke-author
+    width: 40%
+    margin: 0 auto;
+    text-align: right
+
+.show-punchline-button
+    color:#666
+    background-color: #E3E8EE
+    &:hover
+        color:#333
+        background-color: darken(#E3E8EE, 2%)
+
+.ghost-container
+    width:290px; padding:300px 20px 0 90px;
+    height:232px;
+    margin: 0 auto;
+    background-image: url( imageDir login_ghost_large.png );
+    background-repeat: no-repeat;
+
+    *:first-child
+        margin-top:0;
+    h2
+        margin-bottom:2em;
+
+.twitter-login-button
+    twitterBlue = #4099ff
+    background-color: twitterBlue
+    color:#fff
+    font-size:16px; line-height: 1.2em;
+    &:hover
+        color:#fff
+        background-color: lighten(twitterBlue, 20%)
+

@@ -1,0 +1,24 @@
+{{!< layouts/default}}
+
+
+<div class="user-profile">
+    {{#if requestedUser.photo }}
+        <img src="{{ requestedUser.photo }}" class="profile-image">
+    {{else}}
+        <img src="/img/default_user_photo.jpg" class="profile-image">
+    {{/if}}
+
+    <h2>{{ requestedUser.displayName }}</h2>
+
+    {{#if requestedUser.twitterId }}
+        <p>
+            <a href="https://twitter.com/{{ requestedUser.username }}" class="twitter-link">@{{ requestedUser.username }}</a>
+        </p>
+    {{/if}}
+
+    {{> joke_list}}
+
+</div>
+
+
+

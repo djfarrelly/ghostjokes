@@ -1,0 +1,18 @@
+{
+    "cookie_secret":"ghostjokesDOTorg",
+    "session":{
+        "key":"ghostjokesDOTorg",
+        "secret": "patrickswayze"
+    },
+    "twitterAuth":{
+        "consumerKey": "B0rZpemi9fmIBN0V25LeA",
+        "consumerSecret": "cQASufuXA48iCPRKFai2Jx9fZ04LOqDnjl8ogn8qQT8",
+        "callbackURL": "http://www.ghostjokes.org/auth/twitter/callback"
+    },
+    "request_timeout":5000,
+    "port":4000,
+    "mongodb":{
+        "uri":"mongodb://paulo.mongohq.com:10036/app18415597"
+    },
+    "character_encoding":"utf-8"
+}

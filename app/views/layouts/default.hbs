@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <title>Ghost Jokes - {{title}}</title>
+    <meta name="description" content="GhostJokes.org is your source for the wittiest jokes about ghosts you can find on the world wide web. Learn some new jokes for use at cocktail parties and the office. Have a good joke? Add it!">
+    {{> css}}
+    <script src="/js/lib/modernizr.custom.js"></script>
+</head>
+<body>
+
+    <header class="clearfix">
+        <a href="/">
+            <h1 class="branding">Ghost Jokes</h1>
+        </a>
+
+        <nav class="nav">
+            {{#if user }}
+                <a href="/ghosts/{{ user.username }}">
+                    {{#if user.photo }}
+                        <img src="{{ user.photo }}" class="nav-user-icon">
+                    {{else}}
+                        <img src="/img/default_user_photo.jpg" class="nav-user-icon">
+                    {{/if}}
+                </a>
+            {{else}}
+                <a href="/login">Add a joke</a>
+            {{/if}}
+        </nav>
+    </header>
+
+    <div class="content">
+        {{{body}}}
+    </div>
+
+    <footer>
+        <ul class="footer-nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            {{#if user }}
+                <li><a href="/add-a-joke">Add a joke</a></li>
+                <li><a href="/logout">Logout</a></li>
+            {{else}}
+                <li><a href="/login">Submit a joke</a></li>
+                <li><a href="/login">Login / Join</a></li>
+            {{/if}}
+        </ul>
+    </footer>
+
+    {{> scripts}}
+</body>
+</html>

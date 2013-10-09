@@ -1,0 +1,23 @@
+<div class="jokes">
+
+    {{#each jokes}}
+
+        <p class="joke-setup">{{ setup }}</p> 
+
+        <a href="#" class="show-punchline-button button">?</a>
+
+        <div class="joke-hidden">
+
+            <p class="joke-punchline">{{ punchline }}</p>
+
+            <p class="joke-author">
+                &ndash; <a href="/ghosts/{{ author.username }}">
+                    {{ author.username }}
+                </a>
+            </p>
+        </div>
+        
+    {{/each}}
+
+</div>
+
