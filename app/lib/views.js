@@ -6,7 +6,7 @@ module.exports = function (app) {
     //set up view engine
     app.set('view engine', 'hbs');
 
-    console.log("Partials path", path.join(__dirname, "../views/partials"));
+    console.log("Dirname:", __dirname, 'filename: ', __filename, "Partials path", path.join(__dirname, "../views/partials"));
 
     app.engine('hbs', hbs.express3({
         partialsDir:path.join(__dirname, "../views/partials")
