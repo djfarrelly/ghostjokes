@@ -19,6 +19,16 @@ module.exports = function (app, Jokes) {
       res.render('about');
     },
 
+    addJokeForm: function(req, res){
+      return req.user ? res.render('addJoke') : res.redirect('/login');
+    },
+
+    addJoke: function(req, res){
+      if (!req.user) return res.redirect('/login');
+      
+      return req.user ? res.render('addJoke') : res.render('login');
+    },
+
     userProfile: function(req, res){
 
       Jokes.find({ 'author.username': req.requestedUser.username }, function(err, jokes){

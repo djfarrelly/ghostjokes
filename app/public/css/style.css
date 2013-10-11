@@ -272,25 +272,32 @@ table {
 .clearfix:after {
   clear: both;
 }
+html,
 body {
-  padding: 0.5em 3em;
-  font-size: 13px;
-  background: #fcfcfc;
+  height: 100%;
+  width: 100%;
+}
+body {
+  padding: 0.5em 0;
+  font-size: 18px;
+  background: #fcfcfc url("/img/graveyard.svg") no-repeat bottom center;
+  background-size: contain;
   color: #222;
-  font-family: "Noto Serif", "Comic Sans", "Comic Sans MS", sans-serif;
-  font-style: italic;
+  font-family: 'IM Fell English SC', serif;
 }
 header {
-  width: 100%;
-  margin: 1em auto;
+  width: 90%;
+  margin: 1em auto 3em;
 }
 .branding {
   display: inline-block;
   margin: 0;
   height: 40px;
   padding-right: 38px;
-  font-size: 1.7em;
+  font-family: 'Noto Serif', serif;
+  font-size: 22px;
   line-height: 1.5em;
+  font-style: italic;
   font-weight: normal;
   color: #222;
   background-image: url("/img/ghost_mascot_small.png");
@@ -328,6 +335,14 @@ footer {
   list-style: none;
   padding-left: 0;
   text-align: center;
+  font-size: 1.3em;
+  margin: 0.3em auto 0.3em;
+}
+.footer-nav a {
+  color: #ddd;
+}
+.footer-nav a:hover {
+  color: #fff;
 }
 .footer-nav li {
   display: inline;
@@ -344,10 +359,47 @@ a {
 a:hover {
   color: #2498d0;
 }
-.button {
+.button,
+button {
   display: inline-block;
   padding: 0.5em 1em;
   border-radius: 2px;
+  cursor: pointer;
+}
+.submit-button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+.submit-button:hover {
+  background-color: #444;
+}
+input[type="text"],
+input[type="password"],
+textarea {
+  padding: 0.3em 0.5em;
+  min-width: 300px;
+  width: 80%;
+  font-size: 1.3em;
+  background-color: #eee;
+  background-color: rgba(255,255,255,0.8);
+  border: 1px solid #ddd;
+  border: 1px solid rgba(200,200,200,0.8);
+  border-radius: 2px;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+input[type="text"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+  border-color: #ccc;
+  outline: none;
 }
 .page-404 {
   text-align: center;
@@ -407,6 +459,9 @@ a:hover {
 .twitter-login-button:hover {
   color: #fff;
   background-color: #66adff;
+}
+.submit-button-container {
+  margin-top: 3em;
 }
 
 @-webkit-keyframes fadeIn {

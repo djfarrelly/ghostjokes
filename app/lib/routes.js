@@ -20,7 +20,8 @@ module.exports = function (app, ApiController, HomeController, AuthController, m
   app.get('/ghosts/:username', HomeController.userProfile);
 
   // Add a joke
-  // app.get('/add-a-joke', HomeController.addJoke);
+  app.get('/add-a-joke', HomeController.addJokeForm);
+  app.post('/add-a-joke', HomeController.addJoke);
 
   
   // Authentication
