@@ -3,7 +3,7 @@
 var express = require('express')
   // , mongoose = require('mongoose')
   // , connect_timeout = require('connect-timeout')
-  , MongoStore = require('connect-mongo')(express)
+  // , MongoStore = require('connect-mongo')(express)
   , passport = require('passport');
 
 // Middleware
@@ -14,15 +14,15 @@ module.exports = function (app, config, passport_auth) {
    */
 
   // Sessions
-  var mongoStore = new MongoStore({
-    url: process.env.MONGOHQ_URL || config.mongodb.uri
-  });
+  // var mongoStore = new MongoStore({
+  //   url: process.env.MONGOHQ_URL || config.mongodb.uri
+  // });
 
-  var session_middleware = express.session({
-    key: config.session.key,
-    secret: config.session.secret,
-    store: mongoStore
-  });
+  // var session_middleware = express.session({
+  //   key: config.session.key,
+  //   secret: config.session.secret,
+  //   // store: mongoStore
+  // });
 
   // Error handler
   var error_middleware = express.errorHandler({
@@ -35,9 +35,9 @@ module.exports = function (app, config, passport_auth) {
   // app.use(connect_timeout({ time:config.request_timeout }));   // request timeouts
   app.use(express.cookieParser());                                    // req.cookies
   
-  app.use(session_middleware);                                        // req.session
-  app.use(passport.initialize()); // Passport.js
-  app.use(passport.session());
+  // app.use(session_middleware);                                        // req.session
+  // app.use(passport.initialize()); // Passport.js
+  // app.use(passport.session());
 
   // Allow templates to access user and session data
   app.use(function(req, res, next){
