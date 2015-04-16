@@ -2,7 +2,7 @@
 
 var express = require('express')
   // , mongoose = require('mongoose')
-  , connect_timeout = require('connect-timeout')
+  // , connect_timeout = require('connect-timeout')
   , MongoStore = require('connect-mongo')(express)
   , passport = require('passport');
 
@@ -32,7 +32,7 @@ module.exports = function (app, config, passport_auth) {
 
   // Middleware stack for all requests
   app.use(express.static(app.set('public')));                      // static files in /public
-  app.use(connect_timeout({ time:config.request_timeout }));   // request timeouts
+  // app.use(connect_timeout({ time:config.request_timeout }));   // request timeouts
   app.use(express.cookieParser());                                    // req.cookies
   
   app.use(session_middleware);                                        // req.session
